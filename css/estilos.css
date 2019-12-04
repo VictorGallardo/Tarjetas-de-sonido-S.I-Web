@@ -263,12 +263,10 @@ footer{
 @media screen and (max-width: 500px){
     nav ul {
         text-align: center;
+
     }
     nav ul li a{
-        display: column;
-
-        padding: 0 2px;
-  
+        padding: 0 5px;
         line-height: 44px; 
     }
     header{
@@ -289,15 +287,18 @@ footer{
         max-width: 300px;
     }
     .imagenes-galeria{
-        width: 180px;
-        height: 170px;
+        width: 250px;
+        height: 230px;
     
     }
     .contenedor {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
     }
     .set{
-        width: 190px;
+        width: 250px;
         margin-top: 20px;
         margin-bottom: 30px;
 
