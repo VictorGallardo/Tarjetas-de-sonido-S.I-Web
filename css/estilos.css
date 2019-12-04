@@ -1,0 +1,305 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Esto hace que vaya a otra section mas suave */  
+}
+body{
+    font-family: 'Open Sans Condensed', sans-serif;   
+}
+
+/* Esto afecta a todos los contenedores */
+.contenedor{
+    padding: 40px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden; 
+    
+    
+}
+.titulo{
+    color:black;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+     
+}
+
+/* Esta es la zona del nav */
+nav{
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    max-height: 44px;
+    background: #1f1f20;
+    position: fixed;
+    z-index: 9999;
+    transition: top 0.3s;
+}
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0 20px;
+    float: right;   
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    line-height: 44px;  
+
+}
+
+/* Esto hace que al hacer hover en el nav se active en color indicado */
+nav ul li a:hover,
+nav ul li a .active{
+    background: hsla(188, 44%, 42%, 0.50);   
+    transition: 1s;
+    
+}
+
+/*header*/
+
+header{
+    width: 100%;
+    height: 700px;
+    /* Gradiente */
+    background: #aa4b6b; 
+    background: -webkit-linear-gradient(to right, hsla(188, 44%, 42%, 0.61), hsla(240, 10%, 47%, 0.61), hsla(340, 39%, 48%, 0.61)),url(../imagenes/tarjeta1.jpg); 
+    background: linear-gradient(to right, hsla(188, 44%, 42%, 0.61), hsla(240, 10%, 47%, 0.61), hsla(340, 39%, 48%, 0.61)),url(../imagenes/tarjeta1.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Esto afecta al texto del header */
+header .texto-header{
+    display: flex;
+    height: 600px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.texto-header h1{
+    font-size: 60px;
+    color:#fff;
+}
+
+.texto-header h2{
+    font-size: 30px;
+    color:#fff;
+}
+
+.contenedor-sobre-tarjetas{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    border-bottom: solid 0.5px #1f1f20;
+  
+}
+.contenido-caracteristicas{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.textos{ 
+    padding: 0px 0px 15px 0px;
+    font-weight: 17px;
+    text-align: justify;
+}
+
+.textos h3{
+    margin-top: 20px;
+}
+
+.textos h4{
+    margin-top: 20px;
+}
+
+.galeria{
+    background: radial-gradient( rgb(255, 255, 255, 0.80), rgba(255, 255, 255 )),url(../imagenes/tarjeta2r.jpg); 
+    background-attachment: fixed;
+    position: relative; 
+    background-size: cover; 
+   
+    
+}
+.galeria-tipos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    
+}
+.imagenes-galeria{
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+    
+}
+.imagenes-galeria > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+   
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgb(153, 153, 153, 0.80);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 80px;   
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagenes-galeria:hover .hover-galeria{
+    transform: scale(1);
+}
+.set{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-bottom: solid 0.5px gray;
+
+    
+}
+
+footer{
+    background: #1f1f20;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 60px;
+    border-bottom: solid 0.5px gainsboro;
+}
+.contenido-footer{
+    text-align: center;
+    color: #999999;
+
+}
+.nombre-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #999999;
+    
+}
+
+@media screen and (max-width: 900px){
+    header{
+        background-position: center;
+
+    }
+    .galeria{
+        background-position: center;
+
+    }
+    .galeria-tipos{
+        max-width: 450px;
+    }
+    .imagenes-galeria{
+        width: 200px;
+        height: 200px;
+    
+    }
+    .contenedor {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .set{
+        width: 350px;
+    }  
+}
+@media screen and (max-width: 500px){
+    nav ul {
+        text-align: center;
+    }
+    nav ul li a{
+        display: column;
+
+        padding: 0 2px;
+  
+        line-height: 44px; 
+    }
+    header{
+        height: 500px;
+  
+    }
+    .texto-header h1 {
+        font-size: 35px;
+    }
+    .texto-header h2 {
+        font-size: 20px;
+    }
+    .galeria{
+        background-position: center;
+
+    }
+    .galeria-tipos{
+        max-width: 300px;
+    }
+    .imagenes-galeria{
+        width: 180px;
+        height: 170px;
+    
+    }
+    .contenedor {
+        width: 100%;
+    }
+    .set{
+        width: 190px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+    }  
+}
