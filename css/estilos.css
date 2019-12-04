@@ -138,8 +138,7 @@ header .texto-header{
     background-attachment: fixed;
     position: relative; 
     background-size: cover; 
-   
-    
+
 }
 .galeria-tipos{
     display: flex;
@@ -203,7 +202,8 @@ header .texto-header{
     margin-bottom: 20px;
     margin-top: 10px;
     border-bottom: solid 0.5px gray;
-
+    overflow: hidden;
+    position: relative;
     
 }
 
@@ -280,7 +280,10 @@ footer{
         font-size: 20px;
     }
     .galeria{
-        background-position: center;
+        background: radial-gradient( rgb(255, 255, 255, 0.80), rgba(255, 255, 255 )),url(../imagenes/tarjeta2.jpg); 
+        background-attachment: fixed;
+        position: relative; 
+        background-size: cover; 
 
     }
     .galeria-tipos{
