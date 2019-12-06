@@ -34,40 +34,116 @@ nav{
     top: 0;
     right: 0;
     left: 0;
-    width: 100%;
-    height: 48px;
-    max-height: 44px;
-    background: #1f1f20;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 6vh;
+    background-color: #1f1f20;
     position: fixed;
     z-index: 9999;
     transition: top 0.3s;
+
 }
-nav ul{
+.logo{
+    color: rgb(137, 186, 194);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 17px;
+}
+.nav-links{
     display: flex;
-    margin: 0;
-    padding: 0 20px;
-    float: right;   
+    justify-content: space-around;
+    width: 50%;
 }
-
-nav ul li{
+.nav-links li{
     list-style: none;
-}
+    
 
-nav ul li a{
-    display: block;
+}
+.nav-links a{
     color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 14px;
     padding: 0 20px;
     text-decoration: none;
-    line-height: 44px;  
+    line-height: 44px;
+
 
 }
-
-/* Esto hace que al hacer hover en el nav se active en color indicado */
 nav ul li a:hover,
 nav ul li a .active{
     background: hsla(188, 44%, 42%, 0.50);   
     transition: 1s;
     
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(137, 186, 194);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1060px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 900px){
+    .nav-links{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 6vh;
+        background-color: #1f1f20;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
 }
 
 /*header*/
@@ -173,7 +249,7 @@ header .texto-header{
     height: 100%;
     top: 0;
     transform: scale(0);
-    background: rgb(153, 153, 153, 0.80);
+    background: rgba(94, 148, 156, 0.8);
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -200,11 +276,14 @@ header .texto-header{
     object-fit: cover;
     display: block;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-bottom: solid 0.5px gray;
     overflow: hidden;
     position: relative;
     
+}
+.bibliografia{
+    border-top: solid 1px black;
 }
 
 footer{
@@ -261,14 +340,7 @@ footer{
     }  
 }
 @media screen and (max-width: 500px){
-    nav ul {
-        text-align: center;
 
-    }
-    nav ul li a{
-        padding: 0 5px;
-        line-height: 44px; 
-    }
     header{
         height: 500px;
   
@@ -305,5 +377,42 @@ footer{
         margin-top: 20px;
         margin-bottom: 30px;
 
-    }  
+    } 
+    .logo{
+        font-size: 15px;
+    }
+
 }
+@media screen and (max-width: 350px){ 
+    .set{
+        width: 200px;
+    } 
+    .contenedor {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}    
+@media screen and (max-width: 280px){ 
+    .set{
+        width: 150px;
+    } 
+    .galeria-tipos{
+        max-width: 200px;
+    }
+    .imagenes-galeria{
+        width: 200px;
+        height: 180px;
+    
+    }
+    .contenedor {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .logo{
+        font-size: 12px;
+    }
+}    

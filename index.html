@@ -8,19 +8,39 @@
     <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="javascript/javascript.js">
-    </script>
+
 </head>
 <body>
     <header id = inicio>
         <nav id="nav">
-            <ul id= li>
-                <li><a href="#inicio" class="active">Inicio</a></li>
-                <li><a href="#caract">Características</a></li>
-                <li><a href="#conexiones">Conexiones</a></li>
-                <li><a href="#">Modelos</a></li>
-                <li><a href="#">Cual elegir</a></li>
+            <div class="logo">
+                <h4>TARJETAS DE SONIDO</h4>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#inicio" class = "active">Inicio</a>
+                </li>
+                <li>
+                    <a href="#caract">Características</a>
+                </li>
+                <li>
+                        <a href="#galeria">Tipos</a>
+                    </li>
+                <li>
+                    <a href="#conexiones">Conexiones</a>
+                </li>
+                <li>
+                    <a href="#configuraciones">Configuraciones</a>
+                </li>
+                <li>
+                    <a href="#marcas">Marcas</a>
+                </li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
         <section class="texto-header">
             <h1>Tarjetas de sonido</h1>
@@ -185,9 +205,79 @@
                                 
                     </p>
                     <img class="set" src="imagenes/set3.jpg" alt="">
+                    <br>
+                    <h2>Algunos tipos de conectores usados en audio</h2>
+                    <br>
+                    <img class="set" src="imagenes/conectores.jpg" alt="">
                 </div>    
             </div>
         </section>
+        <section class="contenedor configuraciones">
+                <h2 id="marcas" class="titulo">Marcas y precios</h2>
+                
+                <div class="contenido-configuraciones">
+                    <div class="textos">
+                        <br>
+                        <h2>Internas o PCI</h2>
+                        <p>Asus Xonar DX</p>
+                        <p><a href="https://www.asus.com/es/Sound-Cards/Xonar_DX/">página oficial</a></p>
+                        <br> 
+                        <p>Creative Sound Blaster</p>
+                        <p><a href="https://es.creative.com/p/sound-blaster/sound-blaster-audigy-fx">página oficial</a></p>
+                        <br>
+                        <h2>Externas USB</h2>
+                        <p>Focusrite Scarlett 2i2      </p>
+                        <p><a href="https://focusrite.com/usb-audio-interface/scarlett/scarlett-2i2">página oficial</a></p>
+                        <br> 
+                        <p>Roland Rubix 24</p>
+                        <p><a href="https://www.roland.com/es-es/products/rubix24/">página oficial</a></p>
+                        <br>
+                        <h2>Profesionales</h2>
+                        <p>>RME Fireface UFX+ </p>
+                        <p><a href="https://www.rme-audio.de/fireface-ufx.html">página oficial</a></p>
+                        <br> 
+                        <p>Antelope Orion 32+</p>
+                        <p><a href="https://en.antelopeaudio.com/products/orion-32-gen-3/">página oficial</a></p>
+  
+                    </div>    
+                </div>
+            </section>  
+            <section class="contenedor informacion">
+                    <h2 id="informacion" class="titulo">Informacion tomada:</h2>
+                    
+                    <div class="contenido-informacion">
+                        <div class="textos">
+                            <br>
+                            
+                            <p>García Gago, Santiago (30 agosto 2014) 52 - ¿Cómo funcionan las tarjetas de audio?, Radios Libres</p>
+                            <p><a href="https://radioslibres.net/52-como-funcionan-las-tarjetas-de-audio/">https://radioslibres.net/52-como-funcionan-las-tarjetas-de-audio/</a></p>
+                            <br>
+                            <p>M. Z. Javier (2019) ¿Que tarjeta de sonido comprar en 2019?, Tarjetas de Sonido, </p>
+                            <p><a href="https://tarjetasdesonido.net/para-que-sirve-la-tarjeta-de-sonido-cual-es-su-funcion/">https://tarjetasdesonido.net/para-que-sirve-la-tarjeta-de-sonido-cual-es-su-funcion/</a></p>
+                            <br> 
+                            <p>EcuRed, Tarjetas de sonido, </p>
+                            <p><a href="https://www.ecured.cu/Tarjeta_de_sonido ">https://www.ecured.cu/Tarjeta_de_sonido</a></p>
+                            <br>
+                            <p>Denoizer, ¿que es la latencia?, </p>
+                            <p><a href="http://denoizer.com/-que-es-la-latencia-.html">http://denoizer.com/-que-es-la-latencia-.html</a></p>
+
+      
+                        </div>    
+                    </div>
+                </section>  
+                <section class="contenedor bibliografia">
+                       
+                        
+                        <div class="bibliografia">
+                            <div class="textos">
+                                <br>
+                                <h3>Víctor Gallardo Luque</h3>
+                                <p>6 de Diciembre de 2019</p>
+    
+          
+                            </div>    
+                        </div>
+                    </section>
     </main>
     <footer>
         <div class="contenedor-footer">
@@ -200,6 +290,6 @@
           <h2>VGL Desing | Víctor Gallardo</h2>
         </div>
     </footer>
-    
+    <script src="javascript/javascript.js"></script> 
 </body>
 </html>
